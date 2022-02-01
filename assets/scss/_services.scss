@@ -1,0 +1,105 @@
+/* ----------------------------------
+	Service Section Styles
+ ------------------------------------ */
+.services-section.section-padding.pt-0 {
+  @media (max-width: 1191px) {
+    margin-top: -30px;
+  }
+}
+
+.single-service-item {
+  padding: 50px;
+  border: 2px solid #f2f2f2;
+  box-sizing: border-box;
+  transition: all 0.3s;
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+
+  @media (min-width: 767px) and (max-width: 991px) {
+    padding: 40px 30px;
+  }
+
+  @media (max-width: 1191px) {
+    margin-top: 30px;
+  }
+
+  &::before {
+    border-radius: 50%;
+    background-color: rgb(242, 242, 242);
+    width: 122px;
+    height: 122px;
+    position: absolute;
+    content: "";
+    z-index: -1;
+    top: 0px;
+    right: 0;
+    transform: translate(50px, -50px);
+    transition: all 0.3s ease-in-out;
+  }
+
+  &:hover {
+    box-shadow: 0px 16px 32px 0px rgba(183, 186, 187, 0.2);
+    background-color: #fff;
+    border-color: #fff;
+  }
+
+  &:hover::before {
+    background-color: #d55342;
+  }
+
+  .icon {
+    margin-bottom: 30px;
+  }
+
+  .service-details {
+    h2 {
+      font-size: 30px;
+      letter-spacing: -1px;
+      margin-bottom: 10px;
+
+        @media (max-width: 585px) {
+            font-size: 28px;
+        }
+
+      &:hover {
+        color: #d55342;
+      }
+    }
+    p {
+    }
+
+    > a {
+      text-transform: capitalize;
+      font-size: 16px;
+      font-weight: 700;
+      color: #d0d0d0;
+      display: block;
+      margin-top: 25px;
+
+      &:hover {
+        color: #d55342;
+
+        i {
+          color: #d55342;
+          border-color: #d55342;
+          transform: rotate(45deg);
+        }
+      }
+
+      i {
+        border-style: solid;
+        border-width: 2px;
+        border-color: rgb(242, 242, 242);
+        border-radius: 50%;
+        width: 64px;
+        height: 64px;
+        line-height: 62px;
+        text-align: center;
+        color: $theme-color;
+        margin-right: 10px;
+        transition: all 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,179 @@
+/* ----------------------------------
+	Call To Action Section Styles
+ ------------------------------------ */
+.cta-section {
+	.section-title {
+		span {
+			color: #efc94c !important;
+		}
+		h1 {
+			font-size: 50px;
+			line-height: 60px;
+
+			@media (max-width: 767px) {
+				font-size: 2.25rem;
+				line-height: 3rem;
+			}
+		}
+	}
+}
+.cta-subscribe-form {
+	form {
+		margin-top: -20px;
+
+		.single-input {
+			position: relative;
+			z-index: 1;
+			margin-top: 20px;
+
+			span {
+				position: absolute;
+				left: 30px;
+				display: inline-block;
+				font-size: 14px;
+				line-height: 60px;
+				color: #00baa3 !important;	
+			}
+
+			input {
+				background-color: rgb(39, 44, 46);
+				height: 60px;
+				border: 0px;
+				width: 100%;
+				padding-left: 60px;
+				line-height: 60px;
+				color: #fff;
+				font-weight: 500;
+				font-size: 14px;			
+			}
+		}
+
+		button {
+			width: 100%;
+			background-color: #efc94c;
+			line-height: 60px;
+			height: 60px;
+			color: #fff;	
+			font-weight: 700;		
+		}
+	}
+}
+
+
+.video-section {
+	
+	&::before {
+		position: absolute;
+		left: 0;
+		content: "";
+		top: 0;
+		background: $theme-color;
+		width: 100%;
+		height: 100%;
+		opacity: .7;
+		z-index: -1;
+	}
+
+
+	.section-title {
+		span {
+			color: #00baa3;
+		}
+		h1 {
+			color: #fff;
+		}
+	}
+}
+
+
+.donate-now-section {
+	background-color: #f86048;
+
+	@media (max-width: 500px) {
+		text-align: center;
+	}
+
+	.give-donate-form-wrap {
+		.give-donation-level-btn {
+			border-style: solid;
+			border-width: 2px;
+			border-color: rgb(255, 147, 130);
+			background-color: rgb(248, 96, 72);
+			display: inline-block;
+			padding: 20px 40px;
+			border-radius: 30px;
+			line-height: 1;
+			font-size: 20px;
+			font-weight: 700;
+			color: #fff;
+			margin-right: 20px;
+			margin-bottom: 20px;
+			transition: all .3s;
+			
+
+			@media (max-width: 767px) {
+				margin-left: 10px;
+				padding: 15px 40px;
+			}
+			@media (max-width: 585px) {
+				margin-left: 8px;
+				padding: 14px 30px;
+				font-size: 18px;
+			}
+
+			&:hover {
+				border-color: #fff;
+			}
+		}
+
+		.theme-btn {
+			box-shadow: inherit;
+
+			i {
+				margin-right: 8px;
+			}
+		}
+	}
+}
+
+.join-cta-section {
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+
+	&.no-bg {
+		&::before {
+			display: none;
+		}
+	}
+
+	&::before {
+		position: absolute;
+		width: 130%;
+		height: 100%;
+		top: -40%;
+		left: 0;
+		content: "";
+		background-color: #f8f8f8;		
+		transform: rotate(10deg);		
+	}
+
+	.container {
+		padding-top: 120px;
+		padding-bottom: 120px;
+		z-index: 2;
+
+		@media (max-width: 767px) {
+            padding-top: 80px;
+			padding-bottom: 80px;
+        }
+		@media (max-width: 991px) {
+            padding-top: 100px;
+			padding-bottom: 100px;
+        }
+	}
+
+	@media (max-width: 767px) {
+		padding: 0px;
+	}
+}
